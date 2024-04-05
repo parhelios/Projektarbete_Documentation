@@ -38,11 +38,11 @@
 
 ### Order
 
-| Path              | Method | Request          | Response | ResponseCodes | Description         |
-| ----------------- | ------ | ---------------- | -------- | ------------- | ------------------- |
-| "/order"          | GET    | NONE             | Order[]  | 200           | Get all order       |
-| "/order/{userId}" | GET    | int orderId      | Order    | 200, 404      | Get order by id     |
-| "/order/{userId}" | POST   | string userEmail | Order    | 200, 400      | Create a user order |
+| Path                 | Method | Request          | Response | ResponseCodes | Description         |
+| -------------------- | ------ | ---------------- | -------- | ------------- | ------------------- |
+| "/order"             | GET    | NONE             | Order[]  | 200           | Get all order       |
+| "/order/{userId}"    | GET    | int orderId      | Order    | 200, 404      | Get order by id     |
+| "/order/{userEmail}" | POST   | string userEmail | Order    | 200, 400      | Create a user order |
 
 ## Entities
 
@@ -62,21 +62,21 @@
 
 ### Event
 
-| Property Name | Data Type | Description                         |
-| ------------- | --------- | ----------------------------------- |
-| Id            | int       | Id of event in database             |
-| Title         | string    | Name of event                       |
-| Description   | string    | Description of event                |
-| Category      | Category  | Category of event                   |
-| Price         | double    | Price of event                      |
-| DateOfEvent   | datetime  | Date and time of event              |
-| NumberOfSpots | int       | Number of available spots for event |
-| MinimumAge    | int       | Minimum age for entry               |
-| Address       | string    | Street address of user              |
-| Zipcode       | string    | Zip code of user                    |
-| City          | string    | City of residence                   |
-| Participants  | string[]  | Email addresses for participants    |
-| Status        | bool      | Status of event                     |
+| Property Name   | Data Type | Description                         |
+| --------------- | --------- | ----------------------------------- |
+| Id              | int       | Id of event in database             |
+| Title           | string    | Name of event                       |
+| Description     | string    | Description of event                |
+| Category        | Category  | Category of event                   |
+| Price           | double    | Price of event                      |
+| DateTimeOfEvent | datetime  | Date and time of event              |
+| NumberOfSpots   | int       | Number of available spots for event |
+| MinimumAge      | int       | Minimum age for entry               |
+| Address         | string    | Street address of user              |
+| Zipcode         | string    | Zip code of user                    |
+| City            | string    | City of residence                   |
+| Participants    | string[]  | Email addresses for participants    |
+| Status          | bool      | Status of event                     |
 
 ### Category
 
@@ -91,7 +91,7 @@
 | ------------- | ----------------------- | ---------------------------------- |
 | Id            | int                     | Id for database                    |
 | CustomerEmail | string                  | Email for customer that made order |
-| OrderDate     | dateTime                | Date and time of making order      |
+| OrderDateTime | dateTime                | Date and time of making order      |
 | TotalPrice    | double                  | Total price of order               |
 | EventsInOrder | ICollection<EventOrder> | Many-to-many list                  |
 
