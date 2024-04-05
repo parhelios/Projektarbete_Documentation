@@ -4,6 +4,13 @@
 
 ### Event Endpoints
 
+| Path                          | Method | Request         | Response | ResponseCodes | Description       |
+| ----------------------------- | ------ | --------------- | -------- | ------------- | ----------------- |
+| "/events"                     | GET    | NONE            | Event[]  | 200, 404      | Get all events    |
+| "/events/id/{id}"             | GET    | int Id          | Event    | 200, 404      | Get event by id   |
+| "/events/name/{name}"         | GET    | string Name     | Event    | 200, 404      | Get event by name |
+| "/events/category/{category}" | GET    | string Category | Event    | 200, 404      | Get event by name |
+
 ### User Endpoints
 
 ## Data
@@ -29,6 +36,7 @@
 | Id            | int       | Id of event in database             |
 | Title         | string    | Name of event                       |
 | Description   | string    | Description of event                |
+| Category      | string    | Category of event                   |
 | Price         | double    | Price of event                      |
 | DateOfEvent   | datetime  | Date and time of event              |
 | NumberOfSpots | int       | Number of available spots for event |
@@ -37,6 +45,13 @@
 | Zipcode       | string    | Zip code of user                    |
 | City          | string    | City of residence                   |
 | Participants  | string[]  | Email addresses for participants    |
+
+### Category
+
+| Property Name | Data Type | Description                  |
+| ------------- | --------- | ---------------------------- |
+| Id            | int       | Id for database              |
+| Name          | string    | Name of category in database |
 
 ### Order
 
