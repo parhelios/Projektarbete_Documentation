@@ -11,7 +11,7 @@
 | "/events/name/{name}"         | GET    | string Name     | Event    | 200, 404      | Get event by name        |
 | "/events/category/{category}" | GET    | string Category | Event    | 200, 404      | Get event by name        |
 | "/events"                     | POST   | Event           | NONE     | 200, 400      | Add new event            |
-| "/events/{id}"                | PATCH  | int Id, Event   | NONE     | 200, 400      | Update event             |
+| "/events/{id}"                | PATCH  | int Id, Event   | NONE     | 200, 404      | Update event             |
 | "/events/status/{id}"         | PATCH  | NONE            | NONE     | 200, 400      | Toggle status on product |
 | "/events/{id}                 | DELETE | int Id          | NONE     | 200, 404      | Delete event             |
 
