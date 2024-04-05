@@ -10,17 +10,17 @@
 
 ### ApplicationUser : IdentityUser
 
-| Property Name | Data Type | Description                    |
-| ------------- | --------- | ------------------------------ |
-| FirstName     | string    | First name of user in database |
-| LastName      | string    | Last name of user in database  |
-| Address       | string    | Street address of user         |
-| Zipcode       | string    | Zip code of user               |
-| City          | string    | City of residence              |
-| Region        | string    | Region of residence of user    |
-| Country       | string    | Country of residence of user   |
-| Orders        | Order[]   | List of orders made by user    |
-| Role          | string    | Role of user                   |
+| Property Name | Data Type | Description                  |
+| ------------- | --------- | ---------------------------- |
+| FirstName     | string    | First name of user           |
+| LastName      | string    | Last name of user            |
+| Address       | string    | Street address of user       |
+| Zipcode       | string    | Zip code of user             |
+| City          | string    | City of residence            |
+| Region        | string    | Region of residence of user  |
+| Country       | string    | Country of residence of user |
+| Orders        | Order[]   | List of orders made by user  |
+| Role          | string    | Role of user                 |
 
 ### Event
 
@@ -44,12 +44,11 @@
 | ------------- | ----------------------- | ------------------------------- |
 | Id            | int                     | Id for database                 |
 | CustomerId    | int                     | Id for customer that made order |
-| EventsInOrder | Event[]                 | Events in order                 |
 | OrderDate     | DateTime                | Date and time of making order   |
 | TotalPrice    | Double                  | Total price of order            |
-| Products      | ICollection<EventOrder> | Many-to-many list               |
+| EventsInOrder | ICollection<EventOrder> | Many-to-many list               |
 
-### EventOrder
+### EventOrder (Junction Table)
 
 | Property Name | Data Type | Description                            |
 | ------------- | --------- | -------------------------------------- |
