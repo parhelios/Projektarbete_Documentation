@@ -27,6 +27,23 @@
 | "/users/{userId}"      | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update user info  |
 | "/users/{userId}"      | DELETE | int userId              | NONE     | 200, 404      | Delete user       |
 
+### Category Endpoints
+
+| Path             | Method | Request  | Response   | ResponseCodes | Description        |
+| ---------------- | ------ | -------- | ---------- | ------------- | ------------------ |
+| "/category"      | GET    | NONE     | Category[] | 200           | Get all categories |
+| "/category/{id}" | GET    | int Id   | Category   | 200           | Get category by id |
+| "/category"      | POST   | Category | NONE       | 200, 400      | Add new category   |
+| "/category/{id}" | DELETE | int Id   | NONE       | 200, 404      | Delete category    |
+
+### Order
+
+| Path              | Method | Request          | Response | ResponseCodes | Description         |
+| ----------------- | ------ | ---------------- | -------- | ------------- | ------------------- |
+| "/order"          | GET    | NONE             | Order[]  | 200           | Get all order       |
+| "/order/{userId}" | GET    | int orderId      | Order    | 200, 404      | Get order by id     |
+| "/order/{userId}" | POST   | string userEmail | Order    | 200, 400      | Create a user order |
+
 ## Entities
 
 ### ApplicationUser : IdentityUser
