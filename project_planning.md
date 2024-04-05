@@ -4,16 +4,16 @@
 
 ### Event Endpoints
 
-| Path                          | Method | Request         | Response | ResponseCodes | Description              |
-| ----------------------------- | ------ | --------------- | -------- | ------------- | ------------------------ |
-| "/events"                     | GET    | NONE            | Event[]  | 200, 404      | Get all events           |
-| "/events/id/{id}"             | GET    | int Id          | Event    | 200, 404      | Get event by id          |
-| "/events/name/{name}"         | GET    | string Name     | Event    | 200, 404      | Get event by name        |
-| "/events/category/{category}" | GET    | string Category | Event    | 200, 404      | Get event by name        |
-| "/events"                     | POST   | Event           | NONE     | 200, 400      | Add new event            |
-| "/events/{id}"                | PATCH  | int Id, Event   | NONE     | 200, 404      | Update event             |
-| "/events/status/{id}"         | PATCH  | NONE            | NONE     | 200, 400      | Toggle status on product |
-| "/events/{id}                 | DELETE | int Id          | NONE     | 200, 404      | Delete event             |
+| Path                          | Method | Request         | Response | ResponseCodes | Description            |
+| ----------------------------- | ------ | --------------- | -------- | ------------- | ---------------------- |
+| "/events"                     | GET    | NONE            | Event[]  | 200, 404      | Get all events         |
+| "/events/id/{id}"             | GET    | int Id          | Event    | 200, 404      | Get event by id        |
+| "/events/name/{name}"         | GET    | string Name     | Event    | 200, 404      | Get event by name      |
+| "/events/category/{category}" | GET    | string Category | Event    | 200, 404      | Get event by category  |
+| "/events"                     | POST   | Event           | NONE     | 200, 400      | Add new event          |
+| "/events/{id}"                | PUT    | int Id, Event   | NONE     | 200, 404      | Update event           |
+| "/events/status/{id}"         | PATCH  | NONE            | NONE     | 200, 400      | Toggle status on event |
+| "/events/{id}                 | DELETE | int Id          | NONE     | 200, 404      | Delete event           |
 
 ### User Endpoints
 
@@ -22,12 +22,12 @@
 | "/users/"              | GET    | NONE                    | User[]   | 200           | Get all users     |
 | "/users/{userId}"      | GET    | int userId              | User     | 200, 404      | Get user by id    |
 | "/users/email/{email}" | GET    | string Email            | User     | 200, 404      | Get user by email |
-| "/users/role/{role}"   | GET    | string Role             | User     | 200, 404      | Get user by role  |
+| "/users/role/{role}"   | GET    | string Role             | User[]   | 200, 404      | Get users by role |
 | "/users/"              | POST   | User                    | NONE     | 200, 400      | Add new user      |
 | "/users/{userId}"      | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update user info  |
 | "/users/{userId}"      | DELETE | int userId              | NONE     | 200, 404      | Delete user       |
 
-## Data
+## Entities
 
 ### ApplicationUser : IdentityUser
 
@@ -59,6 +59,7 @@
 | Zipcode       | string    | Zip code of user                    |
 | City          | string    | City of residence                   |
 | Participants  | string[]  | Email addresses for participants    |
+| Status        | bool      | Status of event                     |
 
 ### Category
 
@@ -69,13 +70,13 @@
 
 ### Order
 
-| Property Name | Data Type               | Description                     |
-| ------------- | ----------------------- | ------------------------------- |
-| Id            | int                     | Id for database                 |
-| CustomerId    | int                     | Id for customer that made order |
-| OrderDate     | DateTime                | Date and time of making order   |
-| TotalPrice    | Double                  | Total price of order            |
-| EventsInOrder | ICollection<EventOrder> | Many-to-many list               |
+| Property Name | Data Type               | Description                        |
+| ------------- | ----------------------- | ---------------------------------- |
+| Id            | int                     | Id for database                    |
+| CustomerEmail | string                  | Email for customer that made order |
+| OrderDate     | DateTime                | Date and time of making order      |
+| TotalPrice    | Double                  | Total price of order               |
+| EventsInOrder | ICollection<EventOrder> | Many-to-many list                  |
 
 ### EventOrder (Junction Table)
 
