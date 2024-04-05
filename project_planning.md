@@ -74,8 +74,8 @@
 | ------------- | ----------------------- | ---------------------------------- |
 | Id            | int                     | Id for database                    |
 | CustomerEmail | string                  | Email for customer that made order |
-| OrderDate     | DateTime                | Date and time of making order      |
-| TotalPrice    | Double                  | Total price of order               |
+| OrderDate     | dateTime                | Date and time of making order      |
+| TotalPrice    | double                  | Total price of order               |
 | EventsInOrder | ICollection<EventOrder> | Many-to-many list                  |
 
 ### EventOrder (Junction Table)
