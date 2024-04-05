@@ -1,0 +1,61 @@
+# Webbutveckling / Agil Utveckling, Projektarbete - Projektplanering
+
+## Endpoints
+
+### Event Endpoints
+
+### User Endpoints
+
+## Data
+
+### ApplicationUser : IdentityUser
+
+| Property Name | Data Type | Description                    |
+| ------------- | --------- | ------------------------------ |
+| FirstName     | string    | First name of user in database |
+| LastName      | string    | Last name of user in database  |
+| Address       | string    | Street address of user         |
+| Zipcode       | string    | Zip code of user               |
+| City          | string    | City of residence              |
+| Region        | string    | Region of residence of user    |
+| Country       | string    | Country of residence of user   |
+| Orders        | Order[]   | List of orders made by user    |
+| Role          | string    | Role of user                   |
+
+### Event
+
+| Property Name | Data Type | Description                         |
+| ------------- | --------- | ----------------------------------- |
+| Id            | int       | Id of event in database             |
+| Title         | string    | Name of event                       |
+| Description   | string    | Description of event                |
+| Price         | double    | Price of event                      |
+| DateOfEvent   | datetime  | Date and time of event              |
+| NumberOfSpots | int       | Number of available spots for event |
+| MinimumAge    | int       | Minimum age for entry               |
+| Address       | string    | Street address of user              |
+| Zipcode       | string    | Zip code of user                    |
+| City          | string    | City of residence                   |
+| Participants  | string[]  | Email addresses for participants    |
+
+### Order
+
+| Property Name | Data Type               | Description                     |
+| ------------- | ----------------------- | ------------------------------- |
+| Id            | int                     | Id for database                 |
+| CustomerId    | int                     | Id for customer that made order |
+| EventsInOrder | Event[]                 | Events in order                 |
+| OrderDate     | DateTime                | Date and time of making order   |
+| TotalPrice    | Double                  | Total price of order            |
+| Products      | ICollection<EventOrder> | Many-to-many list               |
+
+### EventOrder
+
+| Property Name | Data Type | Description                            |
+| ------------- | --------- | -------------------------------------- |
+| Id            | int       | Id for database                        |
+| EventId       | int       | FK to Event.Id                         |
+| Event         | Event     | Events in event order                  |
+| OrderId       | int       | FK to Order.Id                         |
+| Order         | Order     | Order in product order                 |
+| Amount        | int       | Amount of set product in product order |
