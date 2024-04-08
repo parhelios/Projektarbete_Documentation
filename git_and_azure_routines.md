@@ -6,6 +6,8 @@ Innan något arbete påbörjas, gå in i Terminal och öppna gitbash.
 
 Ställ dig i projektmappen med: **cd "[sökväg]"** (viktigt med citattecken).
 
+Kör **git fetch origin**
+
 Säkerställ att du står i din egen branch, t.ex. **"Tobias-branch"**
 
 Om du inte står i rätt branch, flytta till den med: **git switch [branchnamn]**
