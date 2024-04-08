@@ -4,7 +4,7 @@
 
 Innan något arbete påbörjas, gå in i Terminal och öppna gitbash.
 
-Ställ dig i projektmappen med: **cd "[sökväg]"**
+Ställ dig i projektmappen med: **cd "[sökväg]"** (viktigt med citattecken).
 
 Säkerställ att du står i din egen branch, t.ex. **"Tobias-branch"**
 
@@ -16,11 +16,15 @@ Sen kan arbetet påbörjas.
 
 ### Under arbetet:
 
+Kolla Sprint Taskboard så att ingen annan utvecklare håller på med Tasken du tänkt jobba med.
+
+Assigna dig själv till Tasken i fråga **(!)**.
+
 När en Task påbörjas, flytta den från New till Active.
 
 Utför arbetet.
 
-Namnge Committen till samma nummer och namn som Task:en, t.ex: "120: Add repositories to UOW".
+Namnge Committen till samma nummer och namn som Task:en, t.ex: **"120: Add repositories to UOW"**.
 
 ### Efter arbetet:
 
