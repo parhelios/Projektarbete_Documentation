@@ -20,8 +20,6 @@ Sen kan arbetet påbörjas.
 
 Kolla Sprint Taskboard så att ingen annan utvecklare håller på med Tasken du tänkt jobba med.
 
-Assigna dig själv till Tasken i fråga **(!)**.
-
 När en Task påbörjas, flytta den från New till Active.
 
 Utför arbetet.
