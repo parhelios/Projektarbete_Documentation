@@ -41,3 +41,5 @@ Skriv sedan i Discordkanalen **"code-review"** och tagga relevanta utvecklare.
 Dessa granskar committen och meddelar sedan när code reviewn är avklarad.
 
 Utvecklaren som satte upp pull requesten färdigställer den och kan samtidigt avsluta de Tasks som taggats.
+
+Därefter går det att börja om från början.
