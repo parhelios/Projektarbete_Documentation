@@ -24,7 +24,7 @@
 | "/users/email/{email}" | GET    | string Email            | User     | 200, 404      | Get user by email |
 | "/users/role/{role}"   | GET    | string Role             | User[]   | 200, 404      | Get users by role |
 | "/users/"              | POST   | User                    | NONE     | 200, 400      | Add new user      |
-| "/users/{userId}"      | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update user info  |
+| "/users/{userId}"      | PUT    | int userId, ContactInfo | NONE     | 200, 404      | Update user info  |
 | "/users/{userId}"      | DELETE | int userId              | NONE     | 200, 404      | Delete user       |
 
 ### Category Endpoints
