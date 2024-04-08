@@ -52,6 +52,7 @@
 | ------------- | --------- | ---------------------------- |
 | FirstName     | string    | First name of user           |
 | LastName      | string    | Last name of user            |
+| FullName      | string    | Full name of user            |
 | Address       | string    | Street address of user       |
 | Zipcode       | string    | Zip code of user             |
 | City          | string    | City of residence            |
