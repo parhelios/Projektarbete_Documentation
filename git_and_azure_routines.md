@@ -10,7 +10,7 @@ Säkerställ att du står i din egen branch, t.ex. **"Tobias-branch"**
 
 Om du inte står i rätt branch, flytta till den med: **git switch [branchnamn]**
 
-Synkronisera datan från development till din egen branch med: **git merge development**
+Synkronisera datan från development till din egen branch med: **git merge origin/development**
 
 Sen kan arbetet påbörjas.
 
