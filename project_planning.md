@@ -58,7 +58,7 @@
 | City          | string    | City of residence            |
 | Region        | string    | Region of residence of user  |
 | Country       | string    | Country of residence of user |
-| Orders        | Order[]   | List of orders made by user  |
+| OrderIds      | int[]     | List of orders made by user  |
 | Role          | string    | Role of user                 |
 
 ### Event
