@@ -70,6 +70,7 @@
 | Description     | string    | Description of event                |
 | Category        | Category  | Category of event                   |
 | Price           | double    | Price of event                      |
+| ImageURL        | string    | Image URL of event                  |
 | DateTimeOfEvent | datetime  | Date and time of event              |
 | NumberOfSpots   | int       | Number of available spots for event |
 | MinimumAge      | int       | Minimum age for entry               |
