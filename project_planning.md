@@ -42,7 +42,7 @@
 | -------------------- | ------ | ---------------- | -------- | ------------- | ------------------- |
 | "/order"             | GET    | NONE             | Order[]  | 200           | Get all order       |
 | "/order/{orderId}"   | GET    | int orderId      | Order    | 200, 404      | Get order by id     |
-| "/order/{userEmail}" | POST   | string userEmail, Order | Order    | 200, 400      | Create a user order |
+| "/order/{userEmail}" | POST   | Order            | Order    | 200, 400      | Create a user order |
 
 ## Entities
 
