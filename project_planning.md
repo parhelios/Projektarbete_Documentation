@@ -68,7 +68,7 @@
 | Id              | int       | Id of event in database             |
 | Title           | string    | Name of event                       |
 | Description     | string    | Description of event                |
-| Category        | Category  | Category of event                   |
+| Category        | int       | Category of event                   |
 | Price           | double    | Price of event                      |
 | ImageURL        | string    | Image URL of event                  |
 | DateTimeOfEvent | datetime  | Date and time of event              |
